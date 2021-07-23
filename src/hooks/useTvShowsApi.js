@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const useTvShowsApi = url => {
+const useTvShowsApi = API => {
   const [tvShows, setTvShows] = useState([]);
   useEffect(() => {
     window
-      .fetch(url)
+      .fetch(API)
       .then(response => response.json())
       .then(data => setTvShows(data));
   }, []);
